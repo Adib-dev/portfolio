@@ -84,7 +84,7 @@ export const HeroSection = () => {
                 >
                   <Experience />
                 </Canvas>
-                <p className="mt-72 px-6 flex items-center text-center text-white/60 md:text-lg absolute top-36 left-1/2 -translate-x-1/2 -translate-y-1/2 size-72 border  border-white/15 bg-black/85 backdrop-blur-3xl h-44 rounded-full">
+                <p className="w-full mt-72 px-6 flex items-center text-center text-white/60 md:text-lg absolute top-36 left-1/2 -translate-x-1/2 -translate-y-1/2 size-72 border  border-white/15 bg-black/85 backdrop-blur-3xl h-44 rounded-full">
                   Hey there! Iam Adib. I specialize in creating high performing,
                   functional apps. Looking forward to work with you.
                 </p>
@@ -93,11 +93,11 @@ export const HeroSection = () => {
           </div>
         </div>
         <div className="flex flex-col items-center mt-8 gap-4 md:flex-row justify-center">
-          <button className="inline-flex items-center gap-2 border border-white/15 px-6 h-12 rounded-xl">
-            <span className="font-semibold">Explore My Work</span>
+          <button className="relative z-10 inline-flex items-center gap-2 border border-white/15 px-6 h-12 rounded-xl">
+            <span className="font-semibold">Download CV</span>
             <ArrowDown className="size-4" />
           </button>
-          <button className="inline-flex items-center gap-2 border-white bg-white text-gray-900 h-12 px-6 rounded-xl">
+          <button className="relative z-10 inline-flex items-center gap-2 border-white bg-white text-gray-900 h-12 px-6 rounded-xl">
             <span>🖐️</span>
             <span className="font-semibold">Let&apos;s Connect</span>
           </button>

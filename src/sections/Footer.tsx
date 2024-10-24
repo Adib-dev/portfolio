@@ -30,7 +30,7 @@ export const Footer = () => {
       <div className="container">
         <div className="border-t border-white/15 py-6 text-sm flex flex-col md:flex-row items-center md:justify-between gap-8">
           <div className="text-white/40">&copy; 2024. All rights reserved.</div>
-          <nav className="flex flex-col md:flex-row items-center gap-8">
+          {/* <nav className="flex flex-col md:flex-row items-center gap-8">
             {footerLinks.map((link) => (
               <a
                 key={link.title}
@@ -41,7 +41,7 @@ export const Footer = () => {
                 <ArrowUpRightIcon className="size-4" />
               </a>
             ))}
-          </nav>
+          </nav> */}
         </div>
       </div>
     </footer>

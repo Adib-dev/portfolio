@@ -93,12 +93,6 @@ const hobbies = [
     top: `${Math.floor(Math.random() * 80)}%`,
     left: `${Math.floor(Math.random() * 80)}%`,
   },
-  {
-    title: "Coding",
-    emoji: "💻",
-    top: `${Math.floor(Math.random() * 80)}%`,
-    left: `${Math.floor(Math.random() * 80)}%`,
-  },
 ];
 
 export const AboutSection = () => {
