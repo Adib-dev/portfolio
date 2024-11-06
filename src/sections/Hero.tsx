@@ -58,10 +58,6 @@ export const HeroSection = () => {
           <h1 className="font-serif text-3xl text-center mt-8 tracking-wide md:text-5xl">
             Building Exceptional User Experiences
           </h1>
-          {/* <p className="mt-4 text-center text-white/60 md:text-lg">
-            Hey there! Iam Adib. I specialize in creating high performing,
-            functional apps. Looking forward to work with you.
-          </p> */}
           <div
             style={{
               filter: "drop-shadow(0 0 200px  rgba(255, 61, 0, 1))",
@@ -84,9 +80,9 @@ export const HeroSection = () => {
                 >
                   <Experience />
                 </Canvas>
-                <p className="w-full mt-72 px-6 flex items-center text-center text-white/60 md:text-lg absolute top-36 left-1/2 -translate-x-1/2 -translate-y-1/2 size-72 border  border-white/15 bg-black/85 backdrop-blur-3xl h-44 rounded-full">
-                  Hey there! Iam Adib. I specialize in creating high performing,
-                  functional apps. Looking forward to work with you.
+                <p className="w-full mt-72 px-6 flex items-center text-center text-white/60 md:text-lg absolute top-36 left-1/2 -translate-x-1/2 -translate-y-1/2 size-72 border  border-white/15 bg-black/85 h-44 rounded-full">
+                  Hey there! I am Adib. I specialize in creating high
+                  performing, functional apps. Looking forward to work with you.
                 </p>
               </div>
             </div>
