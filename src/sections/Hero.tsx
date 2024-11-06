@@ -1,33 +1,29 @@
 "use client";
 
-import memojiImage from "@/assets/images/memoji-computer.png";
-import Image from "next/image";
 import ArrowDown from "@/assets/icons/arrow-down.svg";
 import grainImage from "@/assets/images/grain.jpg";
-
 import Spheres from "../components/Spheres";
-import { Canvas, useFrame, useThree } from "@react-three/fiber";
 import { Experience } from "@/components/Experience";
-import { useState } from "react";
 
-const Loader = () => {
-  return (
-    <div className="flex items-center justify-center h-full">
-      <div className="spinner animate-spin rounded-full h-12 w-12 border-2 border-t-transparent"></div>
-    </div>
-  );
-};
+import React, { useState, useEffect } from "react";
+import { Canvas } from "@react-three/fiber";
+import { TypeAnimation } from "react-type-animation";
 
 export const HeroSection = () => {
   const [loaded, setLoaded] = useState(false);
+  const [typing, setTyping] = useState(false);
 
-  const loader = () => {
-    setTimeout(() => {
-      setLoaded(true); // Signal that loading is complete
-    }, 2000);
-  };
+  const introduction = `<Hello World!>\nI'm Adib.\nA web developer with a passion for turning lines of code into seamless digital experiences. I specialize in crafting innovative web-apps that not only look good but work brilliantly. I firmly believe that the web should be both functional and fun. Whether it’s a sleek portfolio, a dynamic e-commerce platform, or just a great user experience, I’m here to build the future, one pixel at a time.`;
 
-  loader();
+  useEffect(() => {
+    // Simulate loading completion
+    const timer = setTimeout(() => {
+      setLoaded(true);
+      setTimeout(() => setTyping(true), 1000);
+    }, 3000); // Adjust the loading time as needed
+
+    return () => clearTimeout(timer);
+  }, []);
 
   return (
     <div
@@ -61,10 +57,11 @@ export const HeroSection = () => {
           <div
             style={{
               filter: "drop-shadow(0 0 200px  rgba(255, 61, 0, 1))",
+              opacity: loaded ? 1 : 0,
             }}
           >
             <div
-              className="relative"
+              className="relative mb-60"
               style={{
                 filter: "drop-shadow(0 0 10px rgba(255, 110, 0, 1))",
               }}
@@ -80,10 +77,17 @@ export const HeroSection = () => {
                 >
                   <Experience />
                 </Canvas>
-                <p className="w-full mt-72 px-6 flex items-center text-center text-white/60 md:text-lg absolute top-36 left-1/2 -translate-x-1/2 -translate-y-1/2 size-72 border  border-white/15 bg-black/85 h-44 rounded-full">
-                  Hey there! I am Adib. I specialize in creating high
-                  performing, functional apps. Looking forward to work with you.
-                </p>
+                <div className="w-full mt-72 p-6 flex justify-center text-white/60 md:text-lg absolute top-36 left-1/2 -translate-x-1/2 border border-white/15 bg-black/85 h-auto rounded-2xl">
+                  {typing && (
+                    <TypeAnimation
+                      style={{ whiteSpace: "pre-line" }}
+                      sequence={[introduction]}
+                      wrapper="span"
+                      speed={80}
+                      repeat={1}
+                    />
+                  )}
+                </div>
               </div>
             </div>
           </div>

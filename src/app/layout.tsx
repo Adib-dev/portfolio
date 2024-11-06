@@ -11,7 +11,7 @@ const calistoga = Calistoga({
 });
 
 export const metadata: Metadata = {
-  title: "Adib.Dev",
+  title: "Adib.Dev | Portfolio",
   description: "Portfolio website",
 };
 
